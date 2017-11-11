@@ -1,0 +1,51 @@
+level-two-page{
+  $hover-color: snow;
+  $background-color: whitesmoke;
+  $success-color: #88fb7a;
+
+  [col-md-2]{
+    margin: -10px;
+  }
+  [col-md-2]:hover{
+    border-color: $hover-color;
+  }
+  .text-input{
+    margin: 10px 6px;
+    text-align: center;
+    font-size: 40px;
+    padding: 5%;
+    font-weight: 400;
+  }
+  .card{
+    background: $background-color;
+  }
+  .card:hover{
+    background: $hover-color;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+  }
+  img{
+    width: 70%;
+    margin: 10px;
+    padding-top: 18%;
+  }
+  .label{
+    margin: 10px;
+    padding-top: 45%;
+    font-weight: 500;
+    font-size: 15px;
+    color: #cccccc;
+    text-align: center;
+  }
+  .display-bottom-row{
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .success{
+    background: $success-color;
+  }
+}

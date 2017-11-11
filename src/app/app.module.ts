@@ -1,30 +1,51 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from '@ionic/storage';
 
-import { MyApp } from './app.component';
+import { AnansiApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LevelOnePage } from '../pages/level-one/level-one';
+import { LevelTwoPage } from '../pages/level-two/level-two';
+import { GameMenuPage } from '../pages/game-menu/game-menu';
+import { AboutPage } from '../pages/about/about';
+import { InstructionsPage } from '../pages/instructions/instructions';
+import { LoadingPage } from '../pages/loading/loading';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    AnansiApp,
+    HomePage,
+    LevelOnePage,
+    LevelTwoPage,
+    GameMenuPage,
+    AboutPage,
+    InstructionsPage,
+    LoadingPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicStorageModule.forRoot(),
+    IonicModule.forRoot(AnansiApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage
+    AnansiApp,
+    HomePage,
+    LevelOnePage,
+    LevelTwoPage,
+    GameMenuPage,
+    AboutPage,
+    InstructionsPage,
+    LoadingPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

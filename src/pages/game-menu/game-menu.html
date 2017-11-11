@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title align="center">
+      Anansi The Spider
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p align="center">
+    <img src="assets/images/spider.png" />
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button outline color="dark" (click)="launchGame()" block>New Game</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col *ngIf="showContinue">
+      <button ion-button outline color="dark" (click)="continueGame()" block>Continue</button>
+    </ion-col>
+  </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button outline color="dark" (click)="viewInstructions()" block>Instructions</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button outline color="dark" (click)="viewAbout()" block>About</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button outline color="dark" block>Exit</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
