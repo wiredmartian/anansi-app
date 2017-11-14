@@ -18,6 +18,7 @@ export class LevelTwoPage {
   valuesArray: number[];
   isLevelCompleted : boolean = false;
   spiderImage: string = 'assets/images/spider.png';
+  beeImage: string = 'assets/images/bee.png';
 
   constructor(private navCtrl: NavController, private storage: Storage){
 

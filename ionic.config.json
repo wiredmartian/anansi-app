@@ -1,6 +1,6 @@
 {
-  "name": "IonicParty",
-  "app_id": "",
+  "name": "Anansi",
+  "app_id": "a6a77395",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

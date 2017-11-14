@@ -6,77 +6,65 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding outline>
+<ion-content padding>
   <h3 align="center" *ngIf="isLevelCompleted">You've Completed The Game!!</h3>
   <form #levelOneForm="ngForm" novalidate>
   <ion-grid>
     <ion-row class="display-top-row">
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.diaOneSum == 15">
-            <ion-label>{{ blockSum.diaOneSum }}</ion-label>
+          <span *ngIf="blockSum?.diaOneSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.diaOneSum != 15">
+          <span *ngIf="blockSum?.diaOneSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
 
       <!-- contains values -->
     <ion-col col-md-2>
-      <span *ngIf="blockSum">
-        <span *ngIf="blockSum.colOneSum == 15">
-          <ion-label>{{ blockSum.colOneSum }}</ion-label>
+        <span *ngIf="blockSum?.colOneSum == 15">
+          <img src="{{ beeImage }}"/>
         </span>
-        <span *ngIf="blockSum.colOneSum != 15">
+        <span *ngIf="blockSum?.colOneSum != 15">
           <img src="{{ spiderImage }}"/>
         </span>
-      </span>
     </ion-col>
     <ion-col col-md-2>
-      <span *ngIf="blockSum">
-        <span *ngIf="blockSum.colTwoSum == 15">
-          <ion-label>{{ blockSum.colTwoSum }}</ion-label>
+        <span *ngIf="blockSum?.colTwoSum == 15">
+          <img src="{{ beeImage }}"/>
         </span>
-        <span *ngIf="blockSum.colTwoSum != 15">
+        <span *ngIf="blockSum?.colTwoSum != 15">
           <img src="{{ spiderImage }}"/>
         </span>
-      </span>
     </ion-col>
     <ion-col col-md-2>
-      <span *ngIf="blockSum">
-        <span *ngIf="blockSum.colThrSum == 15">
-          <ion-label>{{ blockSum.colThrSum }}</ion-label>
+        <span *ngIf="blockSum?.colThrSum == 15">
+          <img src="{{ beeImage }}"/>
         </span>
-        <span *ngIf="blockSum.colThrSum != 15">
+        <span *ngIf="blockSum?.colThrSum != 15">
           <img src="{{ spiderImage }}"/>
         </span>
-      </span>
       </ion-col>
       <!-- end -->
 
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.diaTwoSum == 15">
-            <ion-label>{{ blockSum.diaTwoSum }}</ion-label>
+          <span *ngIf="blockSum?.diaTwoSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.diaTwoSum != 15">
+          <span *ngIf="blockSum?.diaTwoSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
     </ion-row>
 
     <ion-row class="row-one">
       <ion-col col-md-2>
-        <div *ngIf="blockSum">
-          <div *ngIf="blockSum.rowOneSum == 15">
-            <ion-label>{{ blockSum.rowOneSum }}</ion-label>
+          <div *ngIf="blockSum?.rowOneSum == 15">
+            <img src="{{ beeImage }}"/>
           </div>
-          <span *ngIf="blockSum.rowOneSum != 15">
+          <span *ngIf="blockSum?.rowOneSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </div>
       </ion-col>
 
       <ion-col col-md-2>
@@ -102,27 +90,23 @@
       </ion-col>
 
       <ion-col col-md-2>
-        <div *ngIf="blockSum">
-          <div *ngIf="blockSum.rowOneSum == 15">
-            <ion-label>{{ blockSum.rowOneSum }}</ion-label>
+          <div *ngIf="blockSum?.rowOneSum == 15">
+            <img src="{{ beeImage }}"/>
           </div>
-          <span *ngIf="blockSum.rowOneSum != 15">
+          <span *ngIf="blockSum?.rowOneSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </div>
       </ion-col>
     </ion-row>
 
     <ion-row class="row-two">
       <ion-col col-md-2>
-        <div *ngIf="blockSum">
-          <div *ngIf="blockSum.rowTwoSum == 15">
-            <ion-label>{{ blockSum.rowTwoSum }}</ion-label>
+          <div *ngIf="blockSum?.rowTwoSum == 15">
+            <img src="{{ beeImage }}"/>
           </div>
-          <span *ngIf="blockSum.rowTwoSum != 15">
+          <span *ngIf="blockSum?.rowTwoSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </div>
       </ion-col>
       <ion-col col-md-2>
         <ion-card>
@@ -147,27 +131,23 @@
       </ion-col>
 
       <ion-col col-md-2>
-        <div *ngIf="blockSum">
-          <div *ngIf="blockSum.rowTwoSum == 15">
-            <ion-label>{{ blockSum.rowTwoSum }}</ion-label>
+          <div *ngIf="blockSum?.rowTwoSum == 15">
+            <img src="{{ beeImage }}"/>
           </div>
-          <span *ngIf="blockSum.rowTwoSum != 15">
+          <span *ngIf="blockSum?.rowTwoSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </div>
       </ion-col>
     </ion-row>
 
     <ion-row class="row-3">
       <ion-col col-md-2>
-        <div *ngIf="blockSum">
-          <div *ngIf="blockSum.rowThrSum == 15">
-            <ion-label>{{ blockSum.rowThrSum }}</ion-label>
+          <div *ngIf="blockSum?.rowThrSum == 15">
+            <img src="{{ beeImage }}"/>
           </div>
-          <span *ngIf="blockSum.rowThrSum != 15">
+          <span *ngIf="blockSum?.rowThrSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </div>
       </ion-col>
 
       <ion-col col-md-2>
@@ -192,70 +172,58 @@
         </ion-card>
       </ion-col>
       <ion-col col-md-2>
-        <div *ngIf="blockSum">
-          <div *ngIf="blockSum.rowThrSum == 15">
-            <ion-label>{{ blockSum.rowThrSum }}</ion-label>
+          <div *ngIf="blockSum?.rowThrSum == 15">
+            <img src="{{ beeImage }}"/>
           </div>
-          <span *ngIf="blockSum.rowThrSum != 15">
+          <span *ngIf="blockSum?.rowThrSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </div>
       </ion-col>
     </ion-row>
 
     <ion-row class="display-bottom-row">
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.diaTwoSum == 15">
-            <ion-label>{{ blockSum.diaTwoSum }}</ion-label>
+          <span *ngIf="blockSum?.diaTwoSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.diaTwoSum != 15">
+          <span *ngIf="blockSum?.diaTwoSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
       <!-- contains values -->
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.colOneSum == 15">
-            <ion-label>{{ blockSum.colOneSum }}</ion-label>
+          <span *ngIf="blockSum?.colOneSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.colOneSum != 15">
+          <span *ngIf="blockSum?.colOneSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.colTwoSum == 15">
-            <ion-label>{{ blockSum.colTwoSum }}</ion-label>
+          <span *ngIf="blockSum?.colTwoSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.colTwoSum != 15">
+          <span *ngIf="blockSum?.colTwoSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.colThrSum == 15">
-            <ion-label>{{ blockSum.colThrSum }}</ion-label>
+          <span *ngIf="blockSum?.colThrSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.colThrSum != 15">
+          <span *ngIf="blockSum?.colThrSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
       <!-- end -->
 
       <ion-col col-md-2>
-        <span *ngIf="blockSum">
-          <span *ngIf="blockSum.diaOneSum == 15">
-            <ion-label>{{ blockSum.diaOneSum }}</ion-label>
+          <span *ngIf="blockSum?.diaOneSum == 15">
+            <img src="{{ beeImage }}"/>
           </span>
-          <span *ngIf="blockSum.diaOneSum != 15">
+          <span *ngIf="blockSum?.diaOneSum != 15">
             <img src="{{ spiderImage }}"/>
           </span>
-        </span>
       </ion-col>
     </ion-row>
 
