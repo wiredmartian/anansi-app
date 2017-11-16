@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-//import { HomePage } from '../pages/home/home';
-//import { LevelOnePage } from '../pages/level-one/level-one';
 import { GameMenuPage } from '../pages/game-menu/game-menu';
+
 @Component({
   templateUrl: 'app.html'
 })

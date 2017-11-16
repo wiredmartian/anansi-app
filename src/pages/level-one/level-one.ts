@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import { NgForm, NgModel } from '@angular/forms';
 import { RowOneInterface, RowTwoInterface, RowThreeInterface, BlockSumInterface } from '../../interfaces/level-one-interface';
 import { GameMenuPage } from '../game-menu/game-menu';
-import { LevelTwoPage } from '../level-two/level-two';
+import {StoryOnePage} from "../story-one/story-one";
 
 @Component({
   selector: 'level-one-page',
@@ -239,10 +239,8 @@ export class LevelOnePage{
     this.navCtrl.push(GameMenuPage);
     this.navCtrl.setRoot(GameMenuPage);
   }
-
-  moveToNextLevel(){
-    this.navCtrl.push(LevelTwoPage);
-    this.navCtrl.setRoot(LevelTwoPage);
+  moveToStory(){
+    this.navCtrl.push(StoryOnePage);
   }
 
   setLevelCompleted(){

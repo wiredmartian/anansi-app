@@ -7,7 +7,6 @@
 </ion-header>
 
 <ion-content padding>
-  <h3 align="center" *ngIf="isLevelCompleted">You've Completed The Game!!</h3>
   <form #levelOneForm="ngForm" novalidate>
   <ion-grid>
     <ion-row class="display-top-row">
@@ -244,7 +243,7 @@
         <button ion-button outline color="dark" (click)="restartLevel(levelOneForm)" block>Restart</button>
 			</ion-col>
 			<ion-col>
-				<button ion-button outline color="dark" (click)="quitGame()" block>Return</button>
+				<button ion-button outline color="dark" (click)="moveToStory()" block>Next Level</button>
 			</ion-col>
 		</ion-row>
   </ion-grid>

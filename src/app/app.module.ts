@@ -12,7 +12,8 @@ import { LevelTwoPage } from '../pages/level-two/level-two';
 import { GameMenuPage } from '../pages/game-menu/game-menu';
 import { AboutPage } from '../pages/about/about';
 import { InstructionsPage } from '../pages/instructions/instructions';
-import { LoadingPage } from '../pages/loading/loading';
+import {StoryOnePage} from "../pages/story-one/story-one";
+import {StoryTwoPage} from "../pages/story-two/story-two";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoadingPage } from '../pages/loading/loading';
     GameMenuPage,
     AboutPage,
     InstructionsPage,
-    LoadingPage
+    StoryOnePage,
+    StoryTwoPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { LoadingPage } from '../pages/loading/loading';
     GameMenuPage,
     AboutPage,
     InstructionsPage,
-    LoadingPage
+    StoryOnePage,
+    StoryTwoPage
   ],
   providers: [
     StatusBar,

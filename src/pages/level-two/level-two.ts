@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { NgForm, NgModel } from '@angular/forms';
 import { RowOneInterface, RowTwoInterface, RowThreeInterface, BlockSumInterface } from '../../interfaces/level-one-interface';
 import { GameMenuPage } from '../game-menu/game-menu';
+import {StoryTwoPage} from "../story-two/story-two";
 
 @Component({
   selector: 'level-two-page',
@@ -271,6 +272,9 @@ calculateRowThrSum() : number{
     this.isLevelCompleted = this.isLevelCleared();
     this.blockSum.rowOneSum = 0; this.blockSum.rowTwoSum = 0; this.blockSum.rowThrSum = 0;
     this.blockSum.colOneSum = 0; this.blockSum.colTwoSum = 0; this.blockSum.colThrSum = 0;
+  }
+  moveToStory(){
+    this.navCtrl.push(StoryTwoPage);
   }
 
   quitGame(){

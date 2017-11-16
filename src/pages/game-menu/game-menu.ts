@@ -5,6 +5,7 @@ import { LevelOnePage } from '../level-one/level-one';
 import { LevelTwoPage } from '../level-two/level-two';
 import { AboutPage } from '../about/about';
 import { InstructionsPage } from '../instructions/instructions';
+import { Platform} from "ionic-angular";
 
 @Component({
   selector: 'game-menu',
@@ -13,7 +14,7 @@ import { InstructionsPage } from '../instructions/instructions';
 
 export class GameMenuPage{
   showContinue: boolean;
-  constructor(private navCtrl: NavController, private storage: Storage){
+  constructor(private navCtrl: NavController, private storage: Storage, private platform: Platform){
     this.isLevelOneComplete();
   }
   /*ngOnInit(){
@@ -45,5 +46,9 @@ export class GameMenuPage{
   }
   removeLevelOneCompletion(){
     this.storage.remove('LevelOneComplete');
+  }
+
+  exitGame(){
+    this.platform.exitApp();
   }
 }
