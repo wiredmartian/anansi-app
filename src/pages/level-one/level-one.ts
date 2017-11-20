@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { NgForm, NgModel } from '@angular/forms';
 import { RowOneInterface, RowTwoInterface, RowThreeInterface, BlockSumInterface } from '../../interfaces/level-one-interface';
 import { GameMenuPage } from '../game-menu/game-menu';
 import {StoryOnePage} from "../story-one/story-one";
+import {TricksModalPage} from "../tricks-modal/tricks-modal";
 
 @Component({
   selector: 'level-one-page',
@@ -20,7 +21,7 @@ export class LevelOnePage{
   spiderImage: string = 'assets/images/spider.png';
   beeImage: string = 'assets/images/bee.png';
 
-  constructor(private navCtrl: NavController, private storage: Storage){
+  constructor(private navCtrl: NavController, private storage: Storage, private modalCtrl: ModalController){
 
   }
   onValueChange(event, form: NgForm, model: NgModel){
@@ -245,5 +246,9 @@ export class LevelOnePage{
 
   setLevelCompleted(){
     this.storage.set('LevelOneComplete', true);
+  }
+
+  ngOnInit(){
+    this.modalCtrl.create(TricksModalPage).present();
   }
 }

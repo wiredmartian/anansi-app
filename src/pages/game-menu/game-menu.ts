@@ -23,13 +23,13 @@ export class GameMenuPage{
   continueGame(){
     if(this.showContinue){
       this.navCtrl.push(LevelTwoPage);
-      this.navCtrl.setRoot(LevelTwoPage);
+      //this.navCtrl.setRoot(LevelTwoPage);
     }
   }
   launchGame(){
     this.removeLevelOneCompletion();
     this.navCtrl.push(LevelOnePage);
-    this.navCtrl.setRoot(LevelOnePage);
+    //this.navCtrl.setRoot(LevelOnePage);
   }
   viewAbout(){
     this.navCtrl.push(AboutPage);

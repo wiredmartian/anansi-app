@@ -14,6 +14,7 @@ import { AboutPage } from '../pages/about/about';
 import { InstructionsPage } from '../pages/instructions/instructions';
 import {StoryOnePage} from "../pages/story-one/story-one";
 import {StoryTwoPage} from "../pages/story-two/story-two";
+import {TricksModalPage} from "../pages/tricks-modal/tricks-modal";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {StoryTwoPage} from "../pages/story-two/story-two";
     AboutPage,
     InstructionsPage,
     StoryOnePage,
-    StoryTwoPage
+    StoryTwoPage,
+    TricksModalPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import {StoryTwoPage} from "../pages/story-two/story-two";
     AboutPage,
     InstructionsPage,
     StoryOnePage,
-    StoryTwoPage
+    StoryTwoPage,
+    TricksModalPage
   ],
   providers: [
     StatusBar,
